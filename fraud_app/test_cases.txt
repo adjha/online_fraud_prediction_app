@@ -1,0 +1,174 @@
+==========================================
+     FRAUD DETECTION — TEST CASES
+==========================================
+
+This file contains multiple test cases to 
+validate the accuracy and robustness of 
+the Real-Time Fraud Detection System.
+
+------------------------------------------
+LEGIT TEST CASES
+------------------------------------------
+
+(1) Legit Case – Small Payment
+Step = 50
+Amount = 300
+balance_diff_org = -300
+balance_diff_dest = 300
+CASH_OUT = 0
+DEBIT = 0
+PAYMENT = 1
+TRANSFER = 0
+
+Expected: Legit (0.01–0.10)
+
+
+(2) Legit Case – Normal Cash-Out
+Step = 120
+Amount = 1000
+balance_diff_org = -1000
+balance_diff_dest = 1000
+CASH_OUT = 1
+DEBIT = 0
+PAYMENT = 0
+TRANSFER = 0
+
+Expected: Legit (0.05–0.20)
+
+
+(3) Legit Case – Salary Credit
+Step = 300
+Amount = 2000
+balance_diff_org = 2000
+balance_diff_dest = 0
+CASH_OUT = 0
+DEBIT = 0
+PAYMENT = 0
+TRANSFER = 0
+
+Expected: Legit (0.01–0.10)
+
+
+------------------------------------------
+FRAUD TEST CASES
+------------------------------------------
+
+(4) Fraud – High Amount Cash-Out
+Step = 220
+Amount = 350000
+balance_diff_org = -350000
+balance_diff_dest = 350000
+CASH_OUT = 1
+DEBIT = 0
+PAYMENT = 0
+TRANSFER = 0
+
+Expected: Fraud (0.90–1.00)
+
+
+(5) Fraud – High Value Transfer
+Step = 400
+Amount = 450000
+balance_diff_org = -450000
+balance_diff_dest = 450000
+CASH_OUT = 0
+DEBIT = 0
+PAYMENT = 0
+TRANSFER = 1
+
+Expected: Fraud (0.90–1.00)
+
+
+(6) Fraud – Mismatched Balance
+Step = 180
+Amount = 80000
+balance_diff_org = -20000
+balance_diff_dest = 10000
+CASH_OUT = 1
+DEBIT = 0
+PAYMENT = 0
+TRANSFER = 0
+
+Expected: Fraud (0.80–0.95)
+
+
+------------------------------------------
+MEDIUM-RISK TEST CASES
+------------------------------------------
+
+(7) Medium Risk – Transfer
+Step = 140
+Amount = 20000
+balance_diff_org = -20000
+balance_diff_dest = 20000
+CASH_OUT = 0
+DEBIT = 0
+PAYMENT = 0
+TRANSFER = 1
+
+Expected: 0.30–0.60
+
+
+(8) Medium Risk – Large Payment
+Step = 60
+Amount = 30000
+balance_diff_org = -30000
+balance_diff_dest = 30000
+CASH_OUT = 0
+DEBIT = 0
+PAYMENT = 1
+TRANSFER = 0
+
+Expected: 0.20–0.40
+
+
+------------------------------------------
+ADVANCED FRAUD TEST CASES
+------------------------------------------
+
+(9) Fraud – Origin Balance Not Reduced
+Step = 200
+Amount = 15000
+balance_diff_org = 0
+balance_diff_dest = 15000
+CASH_OUT = 1
+DEBIT = 0
+PAYMENT = 0
+TRANSFER = 0
+
+Expected: Fraud (0.85–0.98)
+
+
+(10) Fraud – Negative Destination Balance
+Step = 320
+Amount = 50000
+balance_diff_org = -50000
+balance_diff_dest = -20000
+CASH_OUT = 0
+DEBIT = 0
+PAYMENT = 0
+TRANSFER = 1
+
+Expected: Fraud (0.90+)
+
+
+------------------------------------------
+SPECIAL ADVANCED TEST CASE
+------------------------------------------
+
+(11) Fraud – Severe Balance Mismatch
+Step = 310
+Amount = 180000
+balance_diff_org = -180000
+balance_diff_dest = 50000
+CASH_OUT = 1
+DEBIT = 0
+PAYMENT = 0
+TRANSFER = 0
+
+Expected: Fraud (0.85–0.99)
+
+
+==========================================
+END OF TEST FILE
+==========================================
