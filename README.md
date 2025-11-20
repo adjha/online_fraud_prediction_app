@@ -1,8 +1,6 @@
 <h1 align="center">💳 Real-Time Online Payment Fraud Detection System</h1>
 
-<p align="center">
-  <img src="https://raw.githubusercontent.com/adjha/online_fraud_prediction_app/main/fraud_app/banner.png" width="80%">
-</p>
+
 
 <p align="center"><b>A Deep Learning Powered Fraud Prediction App with Beautiful UI and Real-Time Alerts</b></p>
 
@@ -28,9 +26,7 @@ Perfect for:
 
 ## 🎨 Beautiful UI Preview
 
-<p align="center">
-  <img src="https://raw.githubusercontent.com/adjha/online_fraud_prediction_app/main/fraud_app/ui_preview.png" width="80%">
-</p>
+
 
 ---
 
@@ -78,5 +74,42 @@ cd online_fraud_prediction_app/fraud_app
 2️⃣ Install Dependencies -> pip install -r requirements.txt
 
 3️⃣ Run the App : streamlit run app.py
+```
+
+
+🧪 Sample Test Cases
+
+| Step | Amount | BalDiff Org | BalDiff Dest | Type     | Result  |
+| ---- | ------ | ----------- | ------------ | -------- | ------- |
+| 250  | 350000 | -350000     | 350000       | CASH_OUT | ❌ Fraud |
+| 50   | 500    | -500        | 500          | PAYMENT  | ✔ Legit |
+| 300  | 600000 | -450000     | 200000       | TRANSFER | ❌ Fraud |
+
+</br>
+
+🔥 Key Features </br>
+
+✔ Real-Time Fraud Alerts </br>
+✔ Deep Neural Network </br>
+✔ Lightning Fast Predictions </br>
+✔ Clean & Modern UI </br>
+✔ Easy to Run </br>
+✔ High Recall for Fraud Cases </br>
+
+</br>
+ 
+🎁 Download Ready ZIP Package </br>
+
+Your friend can simply download: </br>
+👉 fraud_app.zip </br>
+Unzip → Run → Done. </br>
+
+🧑‍💻 Authors </br>
+Anand Kumar Jha  </br>
+Anushka Punia </br>
+Talib Hussain </br>
+B.Tech – Information Technology (7th Sem) </br>
+Maharaja Surajmal Institute of Technology </br>
+
 
 
