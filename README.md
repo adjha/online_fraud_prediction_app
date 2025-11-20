@@ -100,7 +100,7 @@ cd online_fraud_prediction_app/fraud_app
  
 🎁 Download Ready ZIP Package </br>
 
-Your friend can simply download: </br>
+Your can simply download: </br>
 👉 fraud_app.zip </br>
 Unzip → Run → Done. </br>
 
